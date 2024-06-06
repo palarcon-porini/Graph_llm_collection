@@ -1,5 +1,8 @@
 import CRAG.Function as f
 from CRAG.Graph import Graph ,Node
+from CRAG import Function 
+from CRAG import Graph
+from CRAG import LLM
 
 class CRAG_Graph:
     def __init__(self) -> None:

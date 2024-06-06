@@ -1,0 +1,131 @@
+# Flask_Element - Un Mini workflow Flask
+
+![Flask](https://img.shields.io/badge/Flask-3.0.3-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.9-green.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Descrizione
+
+Flask_Element è un mini workflow basato su Flask che utilizza gli strumenti di Blueprint di Flask per stabilire un flusso di gestione degli elementi per un'applicazione web. Il progetto consente di definire moduli personalizzati che possono essere riutilizzati e modificati in modo parametrico.
+
+## Struttura del Progetto
+
+La struttura del progetto è la seguente:
+
+```
+Flask_Element/
+│
+├── app.py               # Codice principale Flask
+├── Modules/             # Directory contenente i moduli
+│   └── ...              # Vari moduli
+├── lib/                 # Directory contenente le funzioni varie
+│   └── ...              # Vari script di libreria
+├── templates/           # Directory per i template HTML
+│   └── ...              # Template HTML
+├── static/              # Directory per i file statici (JS, CSS)
+│   └── ...              # File JS e CSS
+├── requirements.txt     # Dipendenze del progetto
+├── .env                 # Variabili d'ambiente del progetto 
+├── Dockerfile           # Configurazione per l'immagine Docker
+└── README.md            # Documentazione del progetto
+```
+
+## Struttura dei moduli
+
+La struttura dei moduli è la seguente:
+
+```
+Flask_Element/
+│
+├── Modules/                 # Directory contenente i moduli
+│   ├── name_module          # Nomecrature del modulo 
+    │   ├── templates/       # Directory per i template HTML del modulo
+        │   └── ...          # Template HTML
+        ├── static/          # Directory per i file statici (JS, CSS) del modulo
+        │   └── ...          # File JS e CSS
+        ├── __init__.py      # file contenente le istanze degli elementi Blueprint e la classe di controllo
+        ├── views.py         # file con il codice delle varie root utili per il funzinamento del modulo 
+```
+
+## Requisiti
+
+Per eseguire questo progetto, sono necessari i seguenti pacchetti Python:
+
+- Flask
+- flask-session
+- python-dotenv
+- langchain-openai
+- langchain-core
+- Markdown
+
+Questi pacchetti possono essere installati utilizzando il file `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Installazione e Esecuzione
+
+1. **Clonare il repository:**
+
+    ```bash
+    git clone https://github.com/palarcon-porini/Flask_Element.git
+    cd Flask_Element
+    ```
+
+2. **Creare ed attivare un ambiente virtuale (opzionale ma consigliato):**
+
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # Su Windows, usare `venv\Scripts\activate`
+    ```
+
+3. **Installare le dipendenze:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Eseguire l'applicazione:**
+
+    ```bash
+    python app.py
+    ```
+
+    L'applicazione sarà accessibile all'indirizzo `http://127.0.0.1:8081`.
+
+## Utilizzo di Docker
+
+Per eseguire l'applicazione utilizzando Docker:
+
+1. **Costruire l'immagine Docker:**
+
+    ```bash
+    docker build -t flask_element .
+    ```
+
+2. **Eseguire il container Docker:**
+
+    ```bash
+    docker run -p 8081:8081 flask_element
+    ```
+
+    L'applicazione sarà accessibile all'indirizzo `http://127.0.0.1:8081`.
+
+## Contribuire
+
+Contributi, bug report e suggerimenti sono benvenuti! Si prega di aprire un'issue su GitHub o fare una pull request. Per contribuire:
+
+1. Forkare il repository.
+2. Creare un branch con il proprio contributo (`git checkout -b nome-del-branch`).
+3. Fare commit delle proprie modifiche (`git commit -m 'Descrizione delle modifiche'`).
+4. Pushare il branch (`git push origin nome-del-branch`).
+5. Aprire una pull request.
+
+## Licenza
+
+Questo progetto è distribuito sotto la licenza MIT. Vedere il file `LICENSE` per ulteriori dettagli.
+
+---
+
+Grazie per aver utilizzato Flask_Element! Se hai domande o bisogno di assistenza, non esitare a contattarci.

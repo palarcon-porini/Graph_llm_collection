@@ -2,8 +2,8 @@ import tiktoken
 from langchain_text_splitters.character import CharacterTextSplitter
 from langchain.docstore.document import Document
 from langchain_core.messages import AIMessage, HumanMessage
-from CRAG.LLM import llm ,question_rewriter, rag_chain, retrieval_grader
-from CRAG.retrieval import Ratrieval
+from .LLM import llm ,question_rewriter, rag_chain, retrieval_grader
+from .retrieval import Ratrieval
 
 def RETRIEVE(state):
     print("---RETRIEVE---")

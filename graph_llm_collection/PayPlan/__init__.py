@@ -1,5 +1,5 @@
-import PayPlan.Function as f
-from PayPlan.Graph import Graph ,Node
+import graph_llm_collection.PayPlan.Function as f
+from graph_llm_collection.PayPlan.Graph import Graph ,Node
 from langchain_core.documents.base import Document
 
 class PayPlan_Graph:

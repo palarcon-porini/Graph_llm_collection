@@ -1,7 +1,7 @@
 import tiktoken
 from langchain_text_splitters.character import CharacterTextSplitter
 from langchain.docstore.document import Document
-import PayPlan.LLM as llm
+import graph_llm_collection.PayPlan.LLM as llm
 
 def START(state):
     print("---ASSESS START---")

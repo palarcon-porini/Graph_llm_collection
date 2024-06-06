@@ -2,6 +2,7 @@ from langchain_openai import  AzureChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import os 
 
 question_rewriter_prompt = PromptTemplate(
     template="""You a question re-writer that converts an input question to a better version that is optimized \n 
@@ -67,7 +68,7 @@ class llm_chian:
           self.chain()
           return self.question_rewriter.invoke(input)
 
-llm = AzureChatOpenAI(temperature=0, model_name="gpt35_16k")
+llm = AzureChatOpenAI(temperature=0, model_name=os.environ['DEPLOYMENT_NAME'])
 question_rewriter = llm_chian(prompt=question_rewriter_prompt,llm_model=llm)
 rag_chain = llm_chian(prompt=rag_chain_prompt,llm_model=llm)
 retrieval_grader = llm_chian(prompt=retrieval_grader_prompt,llm_model=llm)

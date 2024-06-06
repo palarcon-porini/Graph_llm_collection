@@ -1,7 +1,7 @@
 from dotenv import load_dotenv 
 load_dotenv()
-from  PayPlan import PayPlan_Graph
-from  CRAG import CRAG_Graph
+from  graph_llm_collection.PayPlan import PayPlan_Graph
+from  graph_llm_collection.CRAG import CRAG_Graph
 from langchain_community.document_loaders import TextLoader ,PyPDFLoader
 
 # bot = CRAG_Graph()
@@ -9,7 +9,7 @@ from langchain_community.document_loaders import TextLoader ,PyPDFLoader
 # print(answare['answer'])
 
 bot = CRAG_Graph()
-answare =  bot.invoke(question ='piano pagamento, mi servono i valori da pagare e le date', history = [] , path= 'Data' )
+answare =  bot.invoke(question ='piano pagamento, mi servono i valori da pagare e le date', history = [] , path= r'C:\Users\PaulHernanAlarconPac\Desktop\Graph_llm_collection\Data' )
 print(answare['answer'])
 
 # bot = PayPlan_Graph()
